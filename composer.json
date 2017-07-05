@@ -1,0 +1,14 @@
+{
+    "name": "rubricate/paginator",
+    "authors": [
+        {
+            "name": "Estefanio NS",
+            "email": "estefanions@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rubricate\\Paginator\\": "Rubricate/Paginator/"
+        }
+    }
+}
