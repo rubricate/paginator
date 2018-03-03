@@ -18,6 +18,3 @@ interface IGetNumberPaginator
     public function getNumber();
 }    
 
-
-
-

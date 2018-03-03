@@ -18,4 +18,3 @@ interface IGetLinkNumberPaginator
     public function getLinkNumber();
 }
 
-

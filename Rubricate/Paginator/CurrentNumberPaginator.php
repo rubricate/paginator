@@ -19,12 +19,8 @@ class CurrentNumberPaginator implements IGetCurrentNumberPaginator
 
     public function __construct($num)
     {
-        $num = (int) $num;
-        $currentNumber = ($num) ? $num : 1;
-
-
-
-
+        $num                 = (int) $num;
+        $currentNumber       = ($num) ? $num : 1;
         $this->currentNumber = (int) $currentNumber;
     }
 
@@ -38,5 +34,4 @@ class CurrentNumberPaginator implements IGetCurrentNumberPaginator
 
 
 }    
-
 

@@ -31,8 +31,7 @@ class NumberNavPaginator implements INumberNavPaginator
         IGetCurrentNumberPaginator $currentNumber,
         IGetLinkNumberPaginator    $linkNumber,
         $totalRows 
-    )
-    {
+    ) {
         $this->_currentNumber   = $currentNumber;
         $this->_linkNumber      = $linkNumber;
         $this->_totalRows       = $totalRows;
@@ -75,7 +74,7 @@ class NumberNavPaginator implements INumberNavPaginator
 
     private function _setPrevNext()
     {
-        $curr       = self::getCurrent() ;
+        $curr       = self::getCurrent();
         $linkNum    = $this->_linkNumber->getLinkNumber();
         $total      = $this->_totalRows;
 

@@ -24,15 +24,12 @@ class LinkNumberPaginator implements IGetLinkNumberPaginator
 
 
 
-public function getLinkNumber()
-{
-    return $this->num;
-} 
-
-
+    public function getLinkNumber()
+    {
+        return $this->num;
+    } 
 
 
 
 }
-
 

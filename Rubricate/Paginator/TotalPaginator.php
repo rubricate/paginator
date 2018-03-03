@@ -26,9 +26,8 @@ class TotalPaginator implements IGetTotalPaginator
 
     public function getTotal()
     {
-       return  $this->total;
+        return  $this->total;
     } 
     
 }    
-
 

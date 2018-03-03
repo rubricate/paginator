@@ -18,4 +18,3 @@ interface IGetPerPagePaginator
     public function getPerPage();
 }    
 
-

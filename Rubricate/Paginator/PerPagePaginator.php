@@ -23,13 +23,13 @@ class PerPagePaginator implements IGetPerPagePaginator
     }
 
 
-public function getPerPage()
-{
-   return  $this->num;
-} 
+
+    public function getPerPage()
+    {
+        return  $this->num;
+    } 
 
 
 
 }
-
 

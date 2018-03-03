@@ -18,4 +18,3 @@ interface IGetArrowPaginator
     public function getArrow();
 }
 
-

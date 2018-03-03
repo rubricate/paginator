@@ -15,7 +15,7 @@ namespace Rubricate\Paginator;
 use Rubricate\Paginator\Nav\NumberNavPaginator;
 use Rubricate\Paginator\Nav\ArrowNavPaginator;
 
-class Paginator implements IPaginator 
+class Paginator implements IPaginator
 {
 
     private $total;
@@ -30,15 +30,12 @@ class Paginator implements IPaginator
     
 
 
-
-
     public function __construct(
         IGetTotalPaginator          $total, 
         IGetPerPagePaginator        $perPage, 
         IGetCurrentNumberPaginator  $currentNumber, 
         IGetLinkNumberPaginator     $numberLink
-    )
-    {
+    ) {
         $this->total         = $total;
         $this->perPage       = $perPage;
         $this->currentNumber = $currentNumber; 
@@ -48,7 +45,7 @@ class Paginator implements IPaginator
         $c = $this->currentNumber->getCurrentNumber();
 
         $this->offset    = ($p * $c - $p);
-        $this->totalRows = (ceil( $t / $p));
+        $this->totalRows = (ceil($t / $p));
 
 
         $this->numberNav = new NumberNavPaginator(
@@ -65,14 +62,10 @@ class Paginator implements IPaginator
 
 
 
-
-
     public function getTotal()
     {
         return $this->total->getTotal();
     }
-
-
 
 
 
@@ -83,14 +76,10 @@ class Paginator implements IPaginator
 
 
 
-
-
     public function getArrow()
     {
         return  $this->arrowNav;
     } 
-
-
 
 
 
@@ -101,7 +90,6 @@ class Paginator implements IPaginator
 
 
 
-
     public function getOffset()
     {
         return $this->offset;
@@ -109,15 +97,10 @@ class Paginator implements IPaginator
 
 
 
-
-
     public function haveToPaginate()
     {
         return ($this->totalRows > 1); 
     } 
-
-
-
 
 
 

@@ -18,5 +18,3 @@ interface IGetTotalPaginator
     public function getTotal();
 }    
 
-
-

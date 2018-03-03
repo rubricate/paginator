@@ -18,4 +18,3 @@ interface IGetOffsetPaginator
     public function getOffset();
 }
 
-

@@ -30,8 +30,7 @@ class ArrowNavPaginator implements IArrowNavPaginator
     public function __construct(
         IGetCurrentNumberPaginator $currentNumber,
         $totalRows 
-    )
-    { 
+    ) {
         $this->currentNumber = $currentNumber;
         $this->totalRows     = $totalRows;
 
@@ -70,10 +69,10 @@ class ArrowNavPaginator implements IArrowNavPaginator
     {
         $total   = $this->totalRows;
         $currNum = $this->currentNumber->getCurrentNumber();
-        $first   = ($currNum != 1)? 1: NULL;
-        $last    = ($currNum != $total)? $total: NULL;
-        $plus    = ($currNum - 1)? ($currNum - 1): NULL;
-        $less    = (($currNum + 1) <= $total)? ($currNum + 1): NULL;
+        $first   = ($currNum != 1)? 1: null;
+        $last    = ($currNum != $total)? $total: null;
+        $plus    = ($currNum - 1)? ($currNum - 1): null;
+        $less    = (($currNum + 1) <= $total)? ($currNum + 1): null;
 
 
         $this->first = $first;

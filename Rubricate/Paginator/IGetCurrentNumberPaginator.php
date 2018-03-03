@@ -18,4 +18,3 @@ interface IGetCurrentNumberPaginator
     public function getCurrentNumber();
 }    
 
-

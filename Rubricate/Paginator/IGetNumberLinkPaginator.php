@@ -18,4 +18,3 @@ class IGetNumberLinkPaginator
     public function getLinkNumber();
 }    
 
-

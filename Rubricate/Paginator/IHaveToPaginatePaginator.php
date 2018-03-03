@@ -18,4 +18,3 @@ interface IHaveToPaginatePaginator
     public function haveToPaginate();
 }
 
-
