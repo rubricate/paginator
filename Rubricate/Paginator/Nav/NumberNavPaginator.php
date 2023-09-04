@@ -1,16 +1,5 @@
 <?php 
 
-/*
- *
- * @package     RubricatePHP
- * @author      Estefanio NS <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/paginator
- * @copyright   2017
- * 
- */
-
-
-
 namespace Rubricate\Paginator\Nav;
 
 use Rubricate\Paginator\IGetCurrentNumberPaginator;
@@ -18,7 +7,6 @@ use Rubricate\Paginator\IGetLinkNumberPaginator;
 
 class NumberNavPaginator implements INumberNavPaginator
 {
-
     private $_currentNumber;
     private $_linkNumber;
     private $_totalRows;
@@ -36,41 +24,24 @@ class NumberNavPaginator implements INumberNavPaginator
         $this->_linkNumber      = $linkNumber;
         $this->_totalRows       = $totalRows;
 
-
         self::_init();
     }
-
-
-
-
-
 
     public function getCurrent()
     {
         return $this->_currentNumber->getCurrentNumber();
     } 
 
-
-
-
-
-
-
     public function getAll()
     {
         return $this->_numberArr; 
     } 
-
 
     private function _init()
     {
         self::_setPrevNext();
         self::_setNumberAll();
     } 
-
-
-
-
 
     private function _setPrevNext()
     {
@@ -86,10 +57,6 @@ class NumberNavPaginator implements INumberNavPaginator
 
     } 
 
-
-
-
-
     private function _setNumberAll()
     {
         $start = $this->_numberPrevious; 
@@ -100,7 +67,6 @@ class NumberNavPaginator implements INumberNavPaginator
             $this->_numberArr[] = $i;
         }
     } 
-
 
 }    
 
