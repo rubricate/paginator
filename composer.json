@@ -1,5 +1,6 @@
 {
     "name": "rubricate/paginator",
+    "license": "MIT",
     "authors": [
         {
             "name": "Estefanio N Santos",
