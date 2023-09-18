@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Paginator\Nav;
 
 use Rubricate\Paginator\IGetCurrentNumberPaginator;
@@ -24,30 +26,30 @@ class ArrowNavPaginator implements IArrowNavPaginator
         self::init();
     }
 
-    public function getFirst()
+    public function getFirst(): ?int
     {
         return  $this->first;
     } 
 
-    public function getLast()
+    public function getLast(): ?int
     {
         return $this->last;
     } 
 
-    public function getPrev()
+    public function getPrev(): ?int
     {
         return $this->prev;
     } 
 
-    public function getNext()
+    public function getNext(): ?int
     {
         return $this->next;
     } 
 
     private function init()
     {
-        $total   = $this->totalRows;
-        $currNum = $this->currentNumber->getCurrentNumber();
+        $total   = (int) $this->totalRows;
+        $currNum = (int) $this->currentNumber->getCurrentNumber();
         $first   = ($currNum != 1)? 1: null;
         $last    = ($currNum != $total)? $total: null;
         $plus    = ($currNum - 1)? ($currNum - 1): null;

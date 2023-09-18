@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Paginator;
 
 class PerPagePaginator implements IGetPerPagePaginator
@@ -11,7 +13,7 @@ class PerPagePaginator implements IGetPerPagePaginator
         $this->num = (int) $num;
     }
 
-    public function getPerPage()
+    public function getPerPage(): int
     {
         return  $this->num;
     } 

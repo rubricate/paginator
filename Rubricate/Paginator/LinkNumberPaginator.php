@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Paginator;
 
 class LinkNumberPaginator implements IGetLinkNumberPaginator
@@ -11,7 +13,7 @@ class LinkNumberPaginator implements IGetLinkNumberPaginator
         $this->num = (int) $num;
     }
 
-    public function getLinkNumber()
+    public function getLinkNumber(): int
     {
         return $this->num;
     } 

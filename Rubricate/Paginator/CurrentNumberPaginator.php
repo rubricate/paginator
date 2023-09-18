@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Paginator;
 
 class CurrentNumberPaginator implements IGetCurrentNumberPaginator
@@ -13,7 +15,7 @@ class CurrentNumberPaginator implements IGetCurrentNumberPaginator
         $this->currentNumber = (int) $currentNumber;
     }
 
-    public function getCurrentNumber()
+    public function getCurrentNumber(): int
     {
         return  $this->currentNumber;
     }

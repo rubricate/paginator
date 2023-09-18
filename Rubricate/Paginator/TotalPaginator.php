@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Paginator;
 
 class TotalPaginator implements IGetTotalPaginator
@@ -11,7 +13,7 @@ class TotalPaginator implements IGetTotalPaginator
         $this->total = (int) $total;
     }
 
-    public function getTotal()
+    public function getTotal(): int
     {
         return  $this->total;
     } 

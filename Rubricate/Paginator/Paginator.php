@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Rubricate\Paginator;
 
 use Rubricate\Paginator\Nav\NumberNavPaginator;
@@ -46,32 +48,32 @@ class Paginator implements IPaginator
 
     }
 
-    public function getTotal()
+    public function getTotal(): int
     {
         return $this->total->getTotal();
     }
 
-    public function getNumber()
+    public function getNumber(): object
     {
         return  $this->numberNav;
     } 
 
-    public function getArrow()
+    public function getArrow(): object
     {
         return  $this->arrowNav;
     } 
 
-    public function getPerPage()
+    public function getPerPage(): int
     {
         return $this->perPage->getPerPage();
     }
 
-    public function getOffset()
+    public function getOffset(): int
     {
         return $this->offset;
     }
 
-    public function haveToPaginate()
+    public function haveToPaginate(): bool
     {
         return ($this->totalRows > 1); 
     } 
